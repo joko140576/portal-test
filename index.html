@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Flow ACI</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <style>
     .flow-box {
         border: 2px solid #ffffffaa;
@@ -41,12 +42,63 @@
         border-radius: 15px;
     }
     .card h5, .card p { color: white; }
+
+    /* Tombol Petunjuk Custom */
+    .btn-petunjuk {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: white;
+        padding: 12px 30px;
+        font-size: 18px;
+        border-radius: 10px;
+        border: none;
+        width: 280px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+        transition: 0.3s;
+    }
+    .btn-petunjuk:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        opacity: 0.9;
+    }
 </style>
 </head>
+
 <body class="text-center p-3">
 
 <h1 class="fw-bold">ACI</h1>
-<h4 class="fst-italic mb-4">Assessment Center Inklusif</h4>
+<h4 class="fst-italic mb-3">Assessment Center Inklusif</h4>
+
+<!-- Tombol Petunjuk -->
+<button class="btn-petunjuk mb-4" data-bs-toggle="modal" data-bs-target="#petunjukModal">
+    Petunjuk
+</button>
+
+<!-- Modal Petunjuk -->
+<div class="modal fade" id="petunjukModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title fw-bold">Petunjuk Pelaksanaan ACI</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-start" style="font-size: 18px; line-height: 1.8;">
+        <ol>
+            <li>Ini hanya diperuntukkan untuk yang kemarin berhalangan mengikuti test assessment Manager maupun Senior Manager di Head Quarter (kantor pusat).</li>
+            <li>Ada 2 bagian di sini, sisi kiri untuk Manager dan sisi kanan untuk Senior Manager. Silakan dipilih sesuai posisi jabatan Anda.</li>
+            <li>Ikuti flow nya: klik <b>Test TKD</b> → lanjut ke <b>Test TLMS</b> → setelah itu <b>Essay</b>.</li>
+            <li>Jika ada pertanyaan atau kesulitan, silakan hubungi tim Assessment.</li>
+        </ol>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary px-4" data-bs-dismiss="modal">Tutup</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <div class="container">
     <div class="row g-5">
@@ -89,13 +141,13 @@
 
     </div>
 </div>
-</div>
 
 <script>
 function go(url) {
     window.open(url, '_blank');
 }
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
