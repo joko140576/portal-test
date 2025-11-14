@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Flow ACI</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .flow-box {
+        border: 2px solid #ffffffaa;
+        border-radius: 12px;
+        padding: 18px;
+        background: rgba(255,255,255,0.9);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        cursor: pointer;
+        transition: 0.25s ease-in-out;
+        font-weight: 600;
+        color: #222;
+    }
+    .flow-box:hover {
+        background: #ffffff;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+    }
+    .arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 18px solid #333;
+        margin: 10px auto;
+    }
+    .card.manager {
+        background: linear-gradient(135deg, #4facfe, #00f2fe);
+        color: white;
+        border-radius: 15px;
+    }
+    .card.senior {
+        background: linear-gradient(135deg, #fa709a, #fee140);
+        color: white;
+        border-radius: 15px;
+    }
+    .card h5, .card p { color: white; }
+</style>
+</head>
+<body class="text-center p-3">
+
+<h1 class="fw-bold">ACI</h1>
+<h4 class="fst-italic mb-4">Assessment Center Inklusif</h4>
+
+<div class="container">
+    <div class="row g-5">
+
+        <!-- Left Column Card -->
+        <div class="col-12 col-md-6">
+            <div class="card shadow p-3 manager">
+                <h5 class="fw-bold">Manager</h5>
+                <hr>
+                <div class="flow-box" onclick="go('https://forms.gle/17NjhGeE65eK4WXD9')">Test TKD Manager</div>
+                <p>jumlah soal 80 soal, waktu 35 menit. Token = jatiwarna</p>
+                <div class="arrow-down"></div>
+
+                <div class="flow-box" onclick="go('https://forms.gle/vuiBx9s3QjboCnKZ6')">Test TLMS Manager</div>
+                <p>jumlah soal 40 soal, waktu 30 menit. Token = ssibisa</p>
+                <div class="arrow-down"></div>
+
+                <div class="flow-box" onclick="go('https://forms.gle/q1TCxpQvNQXVN86g7')">Test Essay Manager</div>
+                <p>jumlah soal 5 soal, waktu 45 menit. Token = solid</p>
+            </div>
+        </div>
+
+        <!-- Right Column Card -->
+        <div class="col-12 col-md-6">
+            <div class="card shadow p-3 senior">
+                <h5 class="fw-bold">Senior Manager</h5>
+                <hr>
+                <div class="flow-box" onclick="go('https://forms.gle/17NjhGeE65eK4WXD9')">Test TKD Senior Manager</div>
+                <p>jumlah soal 80 soal, waktu 35 menit. Token = jatiwarna</p>
+                <div class="arrow-down"></div>
+
+                <div class="flow-box" onclick="go('https://forms.gle/319r5yxBfHxaJoKJA')">Test TLMS Senior Manager</div>
+                <p>jumlah soal 60 soal, waktu 30 menit. Token = profesional</p>
+                <div class="arrow-down"></div>
+
+                <div class="flow-box" onclick="go('https://forms.gle/q1TCxpQvNQXVN86g7')">Test Essay Senior Manager</div>
+                <p>jumlah soal 5 soal, waktu 45 menit. Token = solid</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<script>
+function go(url) {
+    window.open(url, '_blank');
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
